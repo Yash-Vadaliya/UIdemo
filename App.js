@@ -7,6 +7,8 @@ import {
   Text,
   StatusBar,
   Image,
+  TextInput,
+  Button,
 } from 'react-native';
 
 import {
@@ -19,80 +21,44 @@ import {
 
 
 const App: () => React$Node = () => {
+  const [value, onChangeText] = React.useState('Email Id:');
+  const [value1, onChangePass] = React.useState('Password');
   return (
     <>
-    <View style={{alignSelf: 'center',flex: 0.75,margin: 70}}>
-      <View>
-        <Image
-          style={styles.tinyLogo}
-          source={{
-            uri: 'https://cdn2.vectorstock.com/i/1000x1000/20/76/man-avatar-profile-vector-21372076.jpg',
-          }}
-        />
+    <SafeAreaView style={{flex: 1,backgroundColor: '#b19cd9'}}>
+    <View style={{alignSelf: 'center',marginTop: 150}}>
+    <View>
+        <Text style={styles.name}>FOOBAR</Text>
       </View>
-      <View>
-        <Text style={styles.name}>YASH VADALIYA</Text>
-      </View>
-      <View style={{
-         flex: 0.15,
-         flexDirection: 'row'
-      }}>
-        <View style={{margin: 2,width: '50%', alignSelf:'center'}}>
-          <Text style={{textAlign: 'center',fontWeight: 'bold',fontSize: 18}}>Email ID: </Text>
-        </View>
-        <View style={{margin: 4, width: '50%', alignSelf:'center'}}>
-          <Text style={{textAlign: 'left',fontSize: 18}}>abc@gmail.com</Text>
-        </View>
-      </View>
+      <View style={{marginTop: 100}}>
+        <TextInput
+        style={{ height: 40,width: '100%', borderBottomColor: 'gray', borderBottomWidth: 1 }}
+        placeholder = "Email Id"
+        onChangeText={text => onChangeText(text)}
+        value={value}
+      />
+        </View> 
 
-      <View style={{
-          flex: 0.15,
-          flexDirection: 'row'
-        }}>
-          <View style={{margin: 2,width: '50%', alignSelf:'center'}}>
-            <Text style={{textAlign: 'center',fontWeight: 'bold',fontSize: 18}}>Phone No.: </Text>
-          </View>
-          <View style={{margin: 4, width: '50%', alignSelf:'center'}}>
-            <Text style={{textAlign: 'left',fontSize: 18}}>1234567890</Text>
-          </View>
-        </View>
+        <View>
+        <TextInput
+        style={{ height: 40,width: '100%', borderBottomColor: 'gray', borderBottomWidth: 1 }}
+        placeholder = "Password"
+        onChangePass={text => onChangePass(text)}
+        value1={value}
+      />
+        </View> 
 
-        <View style={{
-          flex: 0.15,
-          flexDirection: 'row'
-        }}>
-          <View style={{margin: 2,width: '50%', alignSelf:'center'}}>
-            <Text style={{textAlign: 'center',fontWeight: 'bold',fontSize: 18}}>City: </Text>
-          </View>
-          <View style={{margin: 4, width: '50%', alignSelf:'center'}}>
-            <Text style={{textAlign: 'left',fontSize: 18}}>Rajkot</Text>
-          </View>
+        <View style={{marginTop: 50}}>
+        <Button
+        title="Login"
+        width='100%'
+        color="#f194ff"
+        onPress={() => Alert.alert('Cannot press this one')}
+      />
         </View>
 
-        <View style={{
-          flex: 0.15,
-          flexDirection: 'row'
-        }}>
-          <View style={{margin: 2,width: '50%', alignSelf:'center'}}>
-            <Text style={{textAlign: 'center',fontWeight: 'bold',fontSize: 18}}>State: </Text>
-          </View>
-          <View style={{margin: 4, width: '50%', alignSelf:'center'}}>
-            <Text style={{textAlign: 'left',fontSize: 18}}>Gujarat</Text>
-          </View>
-        </View>
-
-        <View style={{
-          flex: 0.15,
-          flexDirection: 'row'
-        }}>
-          <View style={{margin: 2,width: '50%', alignSelf:'center'}}>
-            <Text style={{textAlign: 'center',fontWeight: 'bold',fontSize: 18}}>Country : </Text>
-          </View>
-          <View style={{margin: 4, width: '50%', alignSelf:'center'}}>
-            <Text style={{textAlign: 'left',fontSize: 18}}>India</Text>
-          </View>
-        </View>
-        </View>
+    </View>
+      </SafeAreaView>  
     </>
   );
 };
@@ -105,9 +71,10 @@ const styles = StyleSheet.create({
     height: 50,
   },
   name: {
-    borderColor: 'red',
-    borderWidth: 2,
-    margin: 10,
+    //borderColor: 'red',
+    fontSize: 50,
+    borderWidth: 0,
+    //margin: 10,
     textAlign: 'center'
   }
 });
