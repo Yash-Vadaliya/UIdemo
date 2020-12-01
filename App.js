@@ -48,13 +48,22 @@ const App: () => React$Node = () => {
     })
   }
 
+  const updateHandler = (key, text) => {
+    setTodos((prevTodos) => {
+      return [
+        { text: text, key: key },
+        ...prevTodos
+      ]
+    })
+  }
+
   return (
     <>
     
       <View style={styles.container}>
         <Header />
         <View style={ styles.content}>
-          <AddTodo submitHandler={submitHandler} />
+          <AddTodo submitHandler={submitHandler} updateHandler={updateHandler} />
           <View style={styles.list}>
             <FlatList 
               data={todos}

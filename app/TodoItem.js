@@ -1,11 +1,20 @@
-import React from 'react';
-import { StyleSheet, Text, TouchableOpacity } from 'react-native';
+import React, { useState } from 'react';
+import { StyleSheet, Text, TouchableOpacity, Button, View, TextInput } from 'react-native';
 
-export default function TodoItem({ item, pressHandler }) {
+export default function TodoItem({ item, pressHandler, updateHandler }) {
+    const [text, setText] = useState('');
+
+    const changeHandler = (val) => {
+        setText(val);
+    }
     return (
-        <TouchableOpacity onPress={() => pressHandler(item.key)}>
-            <Text style={styles.item}>{item.text}</Text>
+        <View>
+        <TouchableOpacity>
+            <TextInput style={styles.item} onChangeText={changeHandler}>{item.text}</TextInput>
+            <Button  onPress={() => pressHandler(item.key)} title='delete' color='coral' />
+            <Button onPress={() => updateHandler(item.key, item.text)} title='update' color='blue' />
         </TouchableOpacity>
+        </View>
     )
 
 }
