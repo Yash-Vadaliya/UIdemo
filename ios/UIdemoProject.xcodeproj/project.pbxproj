@@ -16,6 +16,9 @@
 		2D02E4BF1E0B4AB3006451C7 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
 		2DCD954D1E0B4F2C00145EB5 /* UIdemoProjectTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E356F21AD99517003FC87E /* UIdemoProjectTests.m */; };
 		81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */; };
+		FB9A73AFB79740C9A290B7BE /* NewWaltDisneyFontRegular-BPen.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 72ADFA3CD1D445999693F4FF /* NewWaltDisneyFontRegular-BPen.ttf */; };
+		7DB5CBA0A8784556AB6A6DD5 /* aclonica.regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A9151695B5864ADD88B4EA8E /* aclonica.regular.ttf */; };
+		F5773E820789494CB2D870AB /* GreatVibes-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = C67269A08C984CC2830915E7 /* GreatVibes-Regular.otf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +54,9 @@
 		81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = UIdemoProject/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
 		ED2971642150620600B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = Platforms/AppleTVOS.platform/Developer/SDKs/AppleTVOS12.0.sdk/System/Library/Frameworks/JavaScriptCore.framework; sourceTree = DEVELOPER_DIR; };
+		72ADFA3CD1D445999693F4FF /* NewWaltDisneyFontRegular-BPen.ttf */ = {isa = PBXFileReference; name = "NewWaltDisneyFontRegular-BPen.ttf"; path = "../assets/fonts/NewWaltDisneyFontRegular-BPen.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		A9151695B5864ADD88B4EA8E /* aclonica.regular.ttf */ = {isa = PBXFileReference; name = "aclonica.regular.ttf"; path = "../assets/fonts/aclonica.regular.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		C67269A08C984CC2830915E7 /* GreatVibes-Regular.otf */ = {isa = PBXFileReference; name = "GreatVibes-Regular.otf"; path = "../assets/fonts/GreatVibes-Regular.otf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -140,6 +146,7 @@
 				00E356EF1AD99517003FC87E /* UIdemoProjectTests */,
 				83CBBA001A601CBA00E9B192 /* Products */,
 				2D16E6871FA4F8E400B85C8A /* Frameworks */,
+				DEA78B56212945CA88FC3C70 /* Resources */,
 			);
 			indentWidth = 2;
 			sourceTree = "<group>";
@@ -156,6 +163,17 @@
 			);
 			name = Products;
 			sourceTree = "<group>";
+		};
+		DEA78B56212945CA88FC3C70 /* Resources */ = {
+			isa = "PBXGroup";
+			children = (
+				72ADFA3CD1D445999693F4FF /* NewWaltDisneyFontRegular-BPen.ttf */,
+				A9151695B5864ADD88B4EA8E /* aclonica.regular.ttf */,
+				C67269A08C984CC2830915E7 /* GreatVibes-Regular.otf */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+			path = "";
 		};
 /* End PBXGroup section */
 
@@ -295,6 +313,9 @@
 			files = (
 				81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */,
 				13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */,
+				FB9A73AFB79740C9A290B7BE /* NewWaltDisneyFontRegular-BPen.ttf in Resources */,
+				7DB5CBA0A8784556AB6A6DD5 /* aclonica.regular.ttf in Resources */,
+				F5773E820789494CB2D870AB /* GreatVibes-Regular.otf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

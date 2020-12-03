@@ -27,5 +27,6 @@ const styles = StyleSheet.create({
         paddingVertical: 6,
         borderBottomWidth: 1,
         borderBottomColor: '#ddd',
+        fontFamily: 'GreatVibes-Regular.otf',
     }
 })
