@@ -19,9 +19,9 @@ import {
 import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
 
-import Splash from './utils/src/Splash';
-import Login from './utils/src/Login';
-import Home from './utils/src/Home';
+import Splashscreeen from './utils/src/Splash';
+import LoginScreen from './utils/src/Login';
+import HomeScreen from './utils/src/Home';
 
 const Stack = createStackNavigator();
 
@@ -29,26 +29,29 @@ const App: () => React$Node = () => {
   return (
     <>
       <NavigationContainer>
-        <Stack.Navigator initialRouteName='Splash'>
-          <Stack.Screen name='Splash' component={Splash} />
-          <Stack.Screen name='AuthStack' component={AuthStack} />
-          <Stack.Screen name='HomeStack' component={HomeStack} />
-        </Stack.Navigator>
-      </NavigationContainer>
+      <Stack.Navigator initialRouteName="Splash">
+        <Stack.Screen name="AuthStack" component={AuthStack} />
+        <Stack.Screen name="Splash" component={Splashscreeen} />
+        <Stack.Screen name="HomeStack" component={HomeStack}/>
+      </Stack.Navigator>
+    </NavigationContainer>
     </>
   );
 };
 
 function AuthStack() {
-  <Stack.Navigator>
-    <Stack.Screen name='Login' component={Login} />
-  </Stack.Navigator>
+  return(
+    <Stack.Navigator>
+      <Stack.Screen name='Login' component={LoginScreen}/>
+    </Stack.Navigator>
+  );
 }
-
 function HomeStack() {
-  <Stack.Navigator>
-    <Stack.Screen name='Home' component={Home} />
-  </Stack.Navigator>
+  return(
+    <Stack.Navigator>
+      <Stack.Screen name='Home' component={HomeScreen}/>
+    </Stack.Navigator>
+  );
 }
 
 const styles = StyleSheet.create({
